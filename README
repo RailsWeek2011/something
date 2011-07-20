@@ -1,0 +1,17 @@
+Blog with gallery
+
+Featurelist:
+
+BLOG:
+Basic blog with the possibility to add, edit, delete and comment posts
+group-management
+possibility to hide single posts
+posting via xmpp
+WYSIWYG editor
+automated archiving of posts 
+
+GALLERY:
+easy-to-use gallery which can be used seperated from the blog
+add, edit, delete, hide albums
+easy upload of new photos
+
