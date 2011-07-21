@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/ln/xmpp4r.git
+  revision: 2dc321a924fa981b0d47180e1a01bc3301c1738c
+  specs:
+    xmpp4r (0.5)
+
+GIT
   remote: https://github.com/thoughtbot/paperclip.git
   revision: f5851f1d2d1d55439ac49071771246e0c76e87db
   specs:
@@ -125,3 +131,4 @@ DEPENDENCIES
   sqlite3
   turn
   uglifier
+  xmpp4r!
