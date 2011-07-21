@@ -1,3 +1,6 @@
 class Post < ActiveRecord::Base
-  belongs_to :comment
+  validates :title,  :presence => true
+  validates :content, :presence => true
+
+  has_many :comment
 end
