@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/kete/tiny_mce.git
+  revision: cfd774e86d58b17168330779272a9e8f55c751c8
+  specs:
+    tiny_mce (0.1.7)
+
+GIT
   remote: https://github.com/ln/xmpp4r.git
   revision: 2dc321a924fa981b0d47180e1a01bc3301c1738c
   specs:
@@ -137,6 +143,7 @@ DEPENDENCIES
   rails (= 3.1.0.rc4)
   sass-rails (~> 3.1.0.rc)
   sqlite3
+  tiny_mce!
   turn
   uglifier
   xmpp4r!

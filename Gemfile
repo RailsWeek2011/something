@@ -8,6 +8,8 @@ gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
 
 gem 'devise'
 
+gem 'tiny_mce', :git => 'https://github.com/kete/tiny_mce.git'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
