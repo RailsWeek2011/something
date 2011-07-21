@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
+
+  uses_tiny_mce
+
   def index
     @comments = Comment.all
 
