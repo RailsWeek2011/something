@@ -1,4 +1,26 @@
 Something::Application.routes.draw do
+  resources :comments
+
+  resources :posts
+
+  get "comments/insert"
+
+  get "comments/edit"
+
+  get "comments/delete"
+
+  get "posts/index"
+
+  get "posts/insert"
+
+  get "posts/delete"
+
+  get "posts/update"
+
+  get "posts/edit"
+
+  get "posts/archive"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
