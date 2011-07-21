@@ -6,7 +6,6 @@
     <th>Content</th>
     <th>Author</th>
     <th>Archived</th>
-    <th>Comment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +17,6 @@
     <td><%= post.content %></td>
     <td><%= post.author_id %></td>
     <td><%= post.archived %></td>
-    <td><%= post.comment %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
