@@ -1,7 +1,8 @@
 Something::Application.routes.draw do
+  devise_for :users
+
   #resources :comments
 
-  devise_for :users
   root :to => "posts#index" 
   resources :posts
 
