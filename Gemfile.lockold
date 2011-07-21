@@ -1,9 +1,4 @@
-GIT
-  remote: https://github.com/ln/xmpp4r.git
-  revision: 2dc321a924fa981b0d47180e1a01bc3301c1738c
-  specs:
-    xmpp4r (0.5)
-
+<<<<<<< HEAD
 GIT
   remote: https://github.com/thoughtbot/paperclip.git
   revision: f5851f1d2d1d55439ac49071771246e0c76e87db
@@ -14,6 +9,8 @@ GIT
       cocaine (>= 0.0.2)
       mime-types
 
+=======
+>>>>>>> 9f452f208707e8ef268525a92c30830d61da43c5
 GEM
   remote: http://rubygems.org/
   specs:
@@ -51,7 +48,10 @@ GEM
     arel (2.1.3)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
+<<<<<<< HEAD
     cocaine (0.1.0)
+=======
+>>>>>>> 9f452f208707e8ef268525a92c30830d61da43c5
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -106,7 +106,11 @@ GEM
     sprockets (2.0.0.beta.10)
       hike (~> 1.0)
       rack (~> 1.0)
+<<<<<<< HEAD
       tilt (~> 1.1, != 1.3.0)
+=======
+      tilt (!= 1.3.0, ~> 1.1)
+>>>>>>> 9f452f208707e8ef268525a92c30830d61da43c5
     sqlite3 (1.3.3)
     thor (0.14.6)
     tilt (1.3.2)
@@ -125,10 +129,12 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   jquery-rails
+<<<<<<< HEAD
   paperclip!
+=======
+>>>>>>> 9f452f208707e8ef268525a92c30830d61da43c5
   rails (= 3.1.0.rc4)
   sass-rails (~> 3.1.0.rc)
   sqlite3
   turn
   uglifier
-  xmpp4r!

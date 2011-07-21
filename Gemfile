@@ -2,6 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc4'
 
+gem 'xmpp4r', :git => 'https://github.com/ln/xmpp4r.git'
+
+gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
