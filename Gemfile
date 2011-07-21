@@ -6,6 +6,8 @@ gem 'xmpp4r', :git => 'https://github.com/ln/xmpp4r.git'
 
 gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
 
+gem 'devise'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
