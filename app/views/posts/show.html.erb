@@ -8,5 +8,18 @@
   <%=redcloth (@post.content) %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% if current_user.try(:admin) %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+<% end %>
+
+<h2>Add a Comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

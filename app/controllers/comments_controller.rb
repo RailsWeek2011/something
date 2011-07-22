@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
-  before_filter :is_admin?, :only => :destroy
+  # before_filter :authenticate_user!, :except => [:index, :show]
+  # before_filter :is_admin?, :only => :destroy
   
   # GET /comments
   # GET /comments.json
@@ -25,17 +25,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # GET /comments/new
-  # GET /comments/new.json
-  def new
-    @comment = Comment.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @comment }
-    end
-  end
-
   # GET /comments/1/edit
   def edit
     @comment = Comment.find(params[:id])
@@ -44,14 +33,18 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(params[:comment])
+    @post = Post.find (params[:post_id])
+    @comment = @post.comments.create(params[:comment])
+    @comment.author_id = current_user.id
+    
+
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to post_path(@post), notice: 'Comment was not created.'}
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
