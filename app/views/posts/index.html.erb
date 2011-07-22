@@ -1,7 +1,6 @@
 <% @posts.each do |post| %>
     <h3><%= post.title %></h3>
-    <p><%=redcloth (post.content) %></p>
-    <%= post.author_id %> |
+    <p><%= redcloth(post.content) %></p>
     <% if user_signed_in? %>
 		<%= link_to 'Comment', new_comment_path %> |
 	<% end %>
