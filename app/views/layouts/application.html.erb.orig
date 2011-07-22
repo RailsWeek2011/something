@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
   <title>Something</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+=======
 	<title>Something</title>
 	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
+>>>>>>> 7a6b5148655f6d4f8becc7fd9f7d09438ec2ac17
 </head>
 <body>
 	<% unless user_signed_in? %>

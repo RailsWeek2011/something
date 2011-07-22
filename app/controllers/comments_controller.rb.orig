@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
 
+<<<<<<< HEAD
+   def index
+=======
   def index
+>>>>>>> 7a6b5148655f6d4f8becc7fd9f7d09438ec2ac17
     @comments = Comment.all
 
     respond_to do |format|

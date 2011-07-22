@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
 
+<<<<<<< HEAD
+    # GET /posts
+=======
 
   # GET /posts
+>>>>>>> 7a6b5148655f6d4f8becc7fd9f7d09438ec2ac17
   # GET /posts.json
   def index
     @posts = Post.all

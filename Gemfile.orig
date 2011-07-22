@@ -1,0 +1,41 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.1.0.rc4'
+
+gem 'jabber-bot'
+
+gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
+
+gem 'devise'
+
+<<<<<<< HEAD
+gem 'RedCloth'
+=======
+#gem 'tiny_mce', :git => 'https://github.com/kete/tiny_mce.git'
+>>>>>>> 7a6b5148655f6d4f8becc7fd9f7d09438ec2ac17
+
+# Bundle edge Rails instead:
+# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+gem 'sqlite3'
+
+# Asset template engines
+gem 'sass-rails', "~> 3.1.0.rc"
+gem 'coffee-script'
+gem 'uglifier'
+
+gem 'jquery-rails'
+
+# Use unicorn as the web server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end

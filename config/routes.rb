@@ -1,10 +1,9 @@
 Something::Application.routes.draw do
   devise_for :users
 
-  #resources :comments
-
   root :to => "posts#index" 
   resources :posts
+  resources :comments
 
   #get "comments/insert"
   #get "comments/edit"
