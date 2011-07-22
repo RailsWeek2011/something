@@ -7,19 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% unless user_signed_in? %>
+  <header>
+  SomeThing
+  </header>
+
+  <nav>
+  <% unless user_signed_in? %>
 		<%= link_to "Login", new_user_session_path %>
 	<% else %> 
 		<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
 	<% end %>
   
-  <% if current_user.try(:admin?) %>
-  |
-    <%= link_to 'New Post', new_post_path %>
+  <% if current_user.try(:admin?) %> |
+  <%= link_to 'New Post', new_post_path %>
   <% end %>
+  </nav>
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-	<%= yield %>
+  
+  <div id="content">
+  
+    <div id="contentleft">
+      <%= yield %>
+    </div>
 
+    <div id="contentright">
+
+      <nav>
+      
+      </nav> 
+
+    </div>
+
+  </div>
+
+  <footer>
+  &copy; by <% User.first.email %>
+  </footer>
 </body>
 </html>
