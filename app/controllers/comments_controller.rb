@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :is_admin?, :only => :destroy
+  
   # GET /comments
   # GET /comments.json
 
