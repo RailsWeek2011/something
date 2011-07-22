@@ -1,16 +1,4 @@
 GIT
-  remote: https://github.com/kete/tiny_mce.git
-  revision: cfd774e86d58b17168330779272a9e8f55c751c8
-  specs:
-    tiny_mce (0.1.7)
-
-GIT
-  remote: https://github.com/ln/xmpp4r.git
-  revision: 2dc321a924fa981b0d47180e1a01bc3301c1738c
-  specs:
-    xmpp4r (0.5)
-
-GIT
   remote: https://github.com/thoughtbot/paperclip.git
   revision: f5851f1d2d1d55439ac49071771246e0c76e87db
   specs:
@@ -23,6 +11,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.7)
     actionmailer (3.1.0.rc4)
       actionpack (= 3.1.0.rc4)
       mail (~> 2.3.0)
@@ -71,6 +60,8 @@ GEM
       multi_json (~> 1.0)
     hike (1.2.0)
     i18n (0.6.0)
+    jabber-bot (1.3.0)
+      xmpp4r-simple (>= 0.8.7)
     jquery-rails (1.0.12)
       railties (~> 3.0)
       thor (~> 0.14)
@@ -131,19 +122,22 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.0.4)
       rack (>= 1.0)
+    xmpp4r (0.5)
+    xmpp4r-simple (0.8.8)
+      xmpp4r (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   coffee-script
   devise
+  jabber-bot
   jquery-rails
   paperclip!
   rails (= 3.1.0.rc4)
   sass-rails (~> 3.1.0.rc)
   sqlite3
-  tiny_mce!
   turn
   uglifier
-  xmpp4r!

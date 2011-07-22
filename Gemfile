@@ -2,13 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc4'
 
-gem 'xmpp4r', :git => 'https://github.com/ln/xmpp4r.git'
+gem 'jabber-bot'
 
 gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
 
 gem 'devise'
 
-gem 'tiny_mce', :git => 'https://github.com/kete/tiny_mce.git'
+gem 'RedCloth'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

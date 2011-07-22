@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(:version => 20110721115804) do
     t.text     "content"
     t.integer  "author_id"
     t.boolean  "archived"
+    t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "posts", ["comment_id"], :name => "index_posts_on_comment_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
