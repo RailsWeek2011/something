@@ -14,7 +14,7 @@
   <tr>
     <td><%= comment.post %></td>
     <td><%= comment.author_id %></td>
-    <td><%=raw RedCloth.new(comment.content).to_htm).to_html %></td>
+    <td><%=redcloth (comment.content) %></td>
     <td><%= link_to 'Show', comment %></td>
     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
     <td><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></td>

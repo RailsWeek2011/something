@@ -7,7 +7,7 @@
 
 <p>
   <b>Content:</b>
-  <%=raw RedCloth.new( @post.content).to_html %>
+  <%=redcloth (@post.content) %>
 </p>
 
 <p>
