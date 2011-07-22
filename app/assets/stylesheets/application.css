@@ -5,3 +5,34 @@
  *= require_self
  *= require_tree . 
 */
+
+/*-------------*/
+body {
+  border: 2px solid white;
+  box-shadow: 2px 2px 5px lightgrey;
+  padding: 0px;
+  margin: 5px auto;
+  font-family: Courier, Arial, Sans-Serif;
+  width: 90%;
+}
+
+header {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+nav {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+article{
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+footer{
+  margin: 10px auto 5px auto;
+  text-align: center;
+  font-size: 0.8em;
+}
