@@ -1,4 +1,20 @@
 Something::Application.routes.draw do
+  get "albums/create"
+
+  get "albums/delete"
+
+  get "albums/edit"
+
+  get "albums/show"
+
+  get "albums/insert"
+
+  get "images/upload"
+
+  get "images/delete"
+
+  get "images/edit"
+
   devise_for :users
 
   root :to => "posts#index" 

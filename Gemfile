@@ -8,6 +8,8 @@ gem 'devise'
 
 gem 'carrierwave'
 
+gem 'rmagick'
+
 gem 'RedCloth'
 
 # Bundle edge Rails instead:
