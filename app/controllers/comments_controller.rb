@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  # before_filter :authenticate_user!, :except => [:index, :show]
-  # before_filter :is_admin?, :only => :destroy
+  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :is_admin?, :only => :destroy
   
   # GET /comments
   # GET /comments.json
@@ -69,11 +69,12 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    @comment = Comment.find(params[:id])
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find( params[ :id ] )
     @comment.destroy
 
     respond_to do |format|
-      format.html { redirect_to comments_url }
+      format.html { redirect_to post_path(@post) }
       format.json { head :ok }
     end
   end

@@ -1,3 +1,6 @@
 class Post < ActiveRecord::Base
-  has_many :comments
+  validates :title, :presence => true
+  validates :content, :presence => true,
+    :length => { :minimum => 5 }
+  has_many :comments, :dependent => :destroy
 end

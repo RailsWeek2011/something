@@ -1,0 +1,8 @@
+<%= comment.content %><br/>
+<% if current_user.try( :admin ) %>
+<%= link_to '[Delete]', [comment.post, comment],
+  :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+  <small>[<%= comment.author.email %>, <%= (comment.created_at).to_time %>]</small>
+
+<hr/>

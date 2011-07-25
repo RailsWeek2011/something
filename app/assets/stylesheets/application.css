@@ -19,7 +19,8 @@ body {
 header {
 	font-size: 3em;
 	text-align: center;
-	width: 950px;
+	color: black;
+  width: 950px;
 	height: 100px;
 	background: url('../images/ubuntu-linux.gif');
 	margin: 10px auto;
@@ -98,3 +99,6 @@ article{
 	width: 180px;
 }
 
+#comments {
+  padding-left: 50px;
+}
