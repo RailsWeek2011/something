@@ -6,9 +6,9 @@ gem 'jabber-bot'
 
 gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
 
-gem 'galleruby'
-
 gem 'devise'
+
+gem 'carrierwave'
 
 gem 'RedCloth'
 
