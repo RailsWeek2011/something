@@ -4,8 +4,6 @@ gem 'rails', '3.1.0.rc4'
 
 gem 'jabber-bot'
 
-gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
-
 gem 'devise'
 
 gem 'carrierwave'
