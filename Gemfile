@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc4'
 
+gem 'xmpp4r-simple', :git => 'https://github.com/fate83/xmpp4r-simple.git'
+
 gem 'jabber-bot'
 
 gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'

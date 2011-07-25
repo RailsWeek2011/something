@@ -1,6 +1,13 @@
 GIT
+  remote: https://github.com/fate83/xmpp4r-simple.git
+  revision: 92e2cd0002ec3a9a38506527e1a3a2d622408626
+  specs:
+    xmpp4r-simple (0.8.8)
+      xmpp4r (>= 0.3.2)
+
+GIT
   remote: https://github.com/thoughtbot/paperclip.git
-  revision: f5851f1d2d1d55439ac49071771246e0c76e87db
+  revision: 0f7485fee5827a679ae969bd864c7d18d71157bd
   specs:
     paperclip (2.3.15)
       activerecord (>= 2.3.0)
@@ -123,8 +130,6 @@ GEM
     warden (1.0.4)
       rack (>= 1.0)
     xmpp4r (0.5)
-    xmpp4r-simple (0.8.8)
-      xmpp4r (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -141,3 +146,4 @@ DEPENDENCIES
   sqlite3
   turn
   uglifier
+  xmpp4r-simple!
