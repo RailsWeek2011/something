@@ -1,1 +1,1 @@
-require_relative '../../lib/jabber/bot'
+require_relative '../../lib/jabber/postbot'
