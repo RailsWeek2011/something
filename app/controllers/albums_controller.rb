@@ -1,4 +1,4 @@
-class albumsController < ApplicationController
+class AlbumsController < ApplicationController
   before_filter :is_admin?, :expect => [:index, :show ]
  
   # GET /albums

@@ -1,4 +1,4 @@
-class imagesController < ApplicationController
+class ImagesController < ApplicationController
   before_filter :is_admin? , :except => [:index, :show]
   
   # GET /images

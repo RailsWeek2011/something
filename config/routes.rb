@@ -6,7 +6,7 @@ Something::Application.routes.draw do
   resources :posts do 
     resources :comments
   end
-  resources :album do
+  resources :albums do
     resources :images
   end
   
