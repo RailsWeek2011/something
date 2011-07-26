@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def is_admin?
     unless current_user.try(:admin?)
       redirect_to root_path
-      flash[:notice]= "Falsche URL"
+      flash[:notice]= "Falsche Url"
     end
-  end 
+  end
 end
