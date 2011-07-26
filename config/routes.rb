@@ -1,19 +1,4 @@
 Something::Application.routes.draw do
-  get "albums/create"
-
-  get "albums/delete"
-
-  get "albums/edit"
-
-  get "albums/show"
-
-  get "albums/insert"
-
-  get "images/upload"
-
-  get "images/delete"
-
-  get "images/edit"
 
   devise_for :users
 
@@ -21,7 +6,11 @@ Something::Application.routes.draw do
   resources :posts do 
     resources :comments
   end
-
+  resources :album do
+    resources :images
+  end
+  
+  
   #get "comments/insert"
   #get "comments/edit"
   #get "comments/delete"
