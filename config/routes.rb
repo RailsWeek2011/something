@@ -1,7 +1,8 @@
 Something::Application.routes.draw do
   devise_for :users
 
-  root :to => "posts#index" 
+  root :to => "posts#index"
+  get "posts/archive" => "posts#archive" 
   resources :posts do 
     resources :comments
   end

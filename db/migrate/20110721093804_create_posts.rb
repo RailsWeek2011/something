@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.integer :author_id
-      t.boolean :archived
+      t.boolean :archived, :default => false
       t.references :comment
 
       t.timestamps

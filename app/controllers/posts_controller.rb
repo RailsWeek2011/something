@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show, :archive]
   before_filter :is_admin?, :only => :new
  
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.where :archived => false
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +13,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def archive
+    @posts = Post.where :archived => true
+
+    render :action => :index
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show
