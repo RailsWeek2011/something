@@ -5,7 +5,7 @@ class imagesController < ApplicationController
   # GET /images.json
 
   def index
-    @images = image.all
+    @images = Image.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -40,10 +40,10 @@ class imagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to album_path(@post), notice: 'image was successfully created.' }
+        format.html { redirect_to album_path(@album), notice: 'Image was successfully created.' }
         format.json { render json: @image, status: :created, location: @comment }
       else
-        format.html { redirect_to album_path(@post), notice: 'image was not created.'}
+        format.html { redirect_to album_path(@album), notice: 'Image was not created.'}
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end
@@ -55,7 +55,7 @@ class imagesController < ApplicationController
     @image = Image.find(params[:id])
 
     respond_to do |format|
-      if @image.update_attributes(params[:comment])
+      if @image.update_attributes(params[:image])
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
         format.json { head :ok }
       else
@@ -68,12 +68,12 @@ class imagesController < ApplicationController
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
-    @album = Album.find(params[:post_id])
+    @album = Album.find(params[:album_id])
     @image = @album.images.find( params[ :id ] )
     @image.destroy
 
     respond_to do |format|
-      format.html { redirect_to album_path(@post) }
+      format.html { redirect_to album_path(@album) }
       format.json { head :ok }
     end
   end

@@ -41,12 +41,12 @@ class albumsController < ApplicationController
   # album /albums
   # album /albums.json
   def create
-    @album = Album.new(params[:post])
+    @album = Album.new(params[:album])
 
     respond_to do |format|
       if @album.save
         format.html { redirect_to @album, notice: 'Album was successfully created.' }
-        format.json { render json: @album, status: :created, location: @post }
+        format.json { render json: @album, status: :created, location: @album }
       else
         format.html { render action: "new" }
         format.json { render json: @album.errors, status: :unprocessable_entity }
@@ -60,7 +60,7 @@ class albumsController < ApplicationController
     @album = Album.find(params[:id])
 
     respond_to do |format|
-      if @album.update_attributes(params[:post])
+      if @album.update_attributes(params[:album])
         format.html { redirect_to @album, notice: 'Album was successfully updated.' }
         format.json { head :ok }
       else
