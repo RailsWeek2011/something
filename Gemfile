@@ -10,6 +10,8 @@ gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
 
 gem 'devise'
 
+gem 'backgrounded'
+
 gem 'RedCloth'
 
 # Bundle edge Rails instead:

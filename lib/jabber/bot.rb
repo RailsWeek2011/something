@@ -1,6 +1,12 @@
 require 'jabber/bot'
 require_relative "../../config/environment"
 
+#module Jabber
+#  class Bot
+#    backgrounded :connect
+#  end
+#end
+
 config = {
   :name		=> 'PostBot',
   :jabber_id	=> 'feedme@stealmyco.de/bot',
@@ -16,12 +22,12 @@ bot = Jabber::Bot.new(config)
   end
 
 bot.add_command(
-  :syntax	=> 'posts! <string>',
+  :syntax	=> 'posts!<string>',
   :description	=> 'Post something on your Blog',
-  :regex	=> /^posts!\s+(.+)$/,
+  :regex	=> /\Aposts\!\s+\"(.+)\"\s+(.+)\z/,
   :is_public	=> false
 ) do |sender, message|
-  puts "#{sender}  #{message}"
-  Post.create :author_id => 1, :title => "ghjkj", :content => message
+    puts "#{sender} Title: #{message[0]}, Content: #{message[1]}"
+    Post.create :author_id => 1, :title => message[0], :content => message[1]
 end
 bot.connect
