@@ -6,11 +6,13 @@ gem 'xmpp4r-simple', :git => 'https://github.com/fate83/xmpp4r-simple.git'
 
 gem 'jabber-bot'
 
-gem 'paperclip', :git => 'https://github.com/thoughtbot/paperclip.git'
-
 gem 'devise'
 
 gem 'backgrounded'
+
+gem 'carrierwave'
+
+gem 'rmagick'
 
 gem 'RedCloth'
 
