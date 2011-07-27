@@ -5,7 +5,7 @@ config = {
   :name		=> 'PostBot',
   :jabber_id	=> 'feedme@stealmyco.de/bot',
   :password	=> 'imbaimba123',
-  :master	=> 'viking@stealmyco.de',
+  :master	=> ['viking@stealmyco.de','mashup@stealmyco.de','charos@stealmyco.de'],
   :is_public	=> true
 }
 
