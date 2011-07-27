@@ -24,4 +24,4 @@ bot.add_command(
     puts "#{sender} Title: #{message[0]}, Content: #{message[1]}"
     Post.create :author_id => 1, :title => message[0], :content => message[1]
 end
-Kernel.fork { bot.connect}
+bot.connect
