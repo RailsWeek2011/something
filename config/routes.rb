@@ -7,9 +7,9 @@ Something::Application.routes.draw do
   resources :posts do 
     resources :comments
   end
-  resources :albums do
-    resources :images
-  end
+ 
+  resources :galleries
+  resources :paintings
   
   
   #get "comments/insert"

@@ -1,0 +1,24 @@
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.painting {
+  border: solid 1px #CCC;
+  padding: 10px 10px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.painting .name {
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.painting .actions {
+  text-align: center;
+  color: #777;
+}
