@@ -34,4 +34,13 @@ class PaintingsController < ApplicationController
     @painting.destroy
     redirect_to @painting.gallery
   end
+      
+  rescue_from CarrierWave::DownloadError, :with => :errorCW
+
+  protected
+  def errorCW
+    flash[:alert] = "Imageupload failed, just http:"
+    redirect_to :back
+  end
+
 end
