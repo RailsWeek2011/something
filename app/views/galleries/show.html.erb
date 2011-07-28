@@ -1,21 +1,26 @@
 <% title @gallery.name %>
-
+<h1><%= @gallery.name %></h1>
 <div id="paintings">
   <% for painting in @gallery.paintings %>
     <div class="painting">
       <%= image_tag painting.image_url(:thumb) if painting.image? %>
       <div class="name"><%= painting.name %></div>
       <div class="actions">
-        <%= link_to "edit", edit_painting_path(painting) %> |
-        <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
+        <%= link_to 'show', painting.image_url %>
+        <% if current_user.try(:admin) %>
+          | <%= link_to 'edit', edit_painting_path(painting) %> |
+          <%= link_to 'remove', painting, :confirm => 'Are you sure?', :method => :delete %>
+        <% end %>
       </div>
     </div>
   <% end %>
   <div class="clear"></div>
 </div>
 
+<% if current_user.try(:admin) %>  
 <p>
-  <%= link_to "Add a Painting", new_painting_path(:gallery_id => @gallery) %> |
-  <%= link_to "Remove Gallery", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View Galleries", galleries_path %>
+  <%= link_to 'Add a Painting', new_painting_path(:gallery_id => @gallery) %> |
+  <%= link_to 'Remove Gallery', @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+<% end %>
+  <%= link_to 'View Galleries', galleries_path %>
 </p>

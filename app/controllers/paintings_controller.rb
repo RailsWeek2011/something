@@ -13,6 +13,10 @@ class PaintingsController < ApplicationController
     end
   end
 
+  def show
+    @painting = Painting.find(params[:id])
+  end
+
   def edit
     @painting = Painting.find(params[:id])
   end
@@ -26,7 +30,7 @@ class PaintingsController < ApplicationController
       render :action => 'edit'
     end
   end
-
+  
   def destroy
     @painting = Painting.find(params[:id])
     @painting.destroy

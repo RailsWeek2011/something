@@ -1,11 +1,18 @@
-<% title "Galleries" %>
-
+<% title 'Gallery' %>
+<h1>Albums</h1>
 <% for gallery in @galleries %>
-  <div class="gallery">
-    <h2><%= link_to gallery.name, gallery %></h2>
-    Paintings: <%= gallery.paintings.size %>
+  <div class="painting">
+    <h2><%= gallery.name %></h2>
+    <%= image_tag gallery.paintings.first.image_url(:thumb) if gallery.paintings.size > 0 %>
+    <div class="actions">
+        <%= link_to 'show', gallery_path(gallery) %>
+        <% if current_user.try(:admin) %>
+          | <%= link_to 'edit', edit_gallery_path(gallery) %> |
+          <%= link_to 'remove', gallery, :confirm => 'Are you sure?', :method => :delete %>
+        <% end %>
+      </div>
+    Images: <%= gallery.paintings.size %>
   </div>
 <% end %>
-
-<p><%= link_to "New Gallery", new_gallery_path %></p>
+  <div class="clear"></div>
 

@@ -22,7 +22,7 @@ header {
 	color: black;
   width: 950px;
 	height: 100px;
-	background: url('../images/ubuntu-linux.gif');
+	background: url('something.png') no-repeat;
 	margin: 10px auto;
 }
 
@@ -91,12 +91,12 @@ article{
 	padding-right: 10px;
   border-right: 2px solid black;
   float: left;
-	width: 700px;
+	width: 730px;
 }
 
 #contentright {
 	float: right; 
-	width: 180px;
+	width: 150px;
 }
 
 #comments {

@@ -8,7 +8,6 @@
 </head>
 <body>
   <header>
-  SomeThing
   </header>
 
   <nav>
@@ -19,7 +18,8 @@
 	<% end %>
   
   <% if current_user.try(:admin?) %> |
-  <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %> |
+    <%= link_to "New Gallery", new_gallery_path %>
   <% end %>
   </nav>
 	<p class="notice"><%= notice %></p>
