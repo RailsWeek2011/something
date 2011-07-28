@@ -1,17 +1,17 @@
 <% title 'Gallery' %>
 <h1>Albums</h1>
-<% for gallery in @galleries %>
+<% @galleries.each do |g|%>
   <div class="painting">
-    <h2><%= gallery.name %></h2>
-    <%= image_tag gallery.paintings.first.image_url(:thumb) if gallery.paintings.size > 0 %>
+    <h2><%= g.name %></h2>
+    <%= image_tag g.paintings.first.image_url(:thumb) if g.paintings.size > 0 %>
     <div class="actions">
-        <%= link_to 'show', gallery_path(gallery) %>
+        <%= link_to 'show', gallery_path(g) %>
         <% if current_user.try(:admin) %>
-          | <%= link_to 'edit', edit_gallery_path(gallery) %> |
-          <%= link_to 'remove', gallery, :confirm => 'Are you sure?', :method => :delete %>
+          | <%= link_to 'edit', edit_gallery_path(g) %> |
+          <%= link_to 'remove', g, :confirm => 'Are you sure?', :method => :delete %>
         <% end %>
       </div>
-    Images: <%= gallery.paintings.size %>
+    Images: <%= g.paintings.size %>
   </div>
 <% end %>
   <div class="clear"></div>

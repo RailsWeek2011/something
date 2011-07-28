@@ -1,15 +1,15 @@
 <% title @gallery.name %>
 <h1><%= @gallery.name %></h1>
 <div id="paintings">
-  <% for painting in @gallery.paintings %>
+  <% @gallery.paintings.each do |p| %>
     <div class="painting">
-      <%= image_tag painting.image_url(:thumb) if painting.image? %>
-      <div class="name"><%= painting.name %></div>
+      <%= image_tag p.image_url(:thumb) if p.image? %>
+      <div class="name"><%= p.name %></div>
       <div class="actions">
-        <%= link_to 'show', painting.image_url %>
+        <%= link_to 'show', painting_path(p)%>
         <% if current_user.try(:admin) %>
-          | <%= link_to 'edit', edit_painting_path(painting) %> |
-          <%= link_to 'remove', painting, :confirm => 'Are you sure?', :method => :delete %>
+          | <%= link_to 'edit', edit_painting_path(p) %> |
+          <%= link_to 'remove', p, :confirm => 'Are you sure?', :method => :delete %>
         <% end %>
       </div>
     </div>

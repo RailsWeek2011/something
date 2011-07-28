@@ -6,7 +6,6 @@ class PaintingsController < ApplicationController
   def create
     @painting = Painting.new(params[:painting])
     if @painting.save
-      flash[:notice] = "Successfully created painting."
       redirect_to @painting.gallery
     else
       render :action => 'new'
@@ -24,7 +23,6 @@ class PaintingsController < ApplicationController
   def update
     @painting = Painting.find(params[:id])
     if @painting.update_attributes(params[:painting])
-      flash[:notice] = "Successfully updated painting."
       redirect_to @painting.gallery
     else
       render :action => 'edit'
@@ -34,7 +32,6 @@ class PaintingsController < ApplicationController
   def destroy
     @painting = Painting.find(params[:id])
     @painting.destroy
-    flash[:notice] = "Successfully destroyed painting."
     redirect_to @painting.gallery
   end
 end
