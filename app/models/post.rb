@@ -9,6 +9,7 @@ class Post < ActiveRecord::Base
       unless post.archived? 
         if post.created_at < 14.days.ago #(Time.new)-1209600
           post.archived = true
+          post.save
         end
       end
     end
