@@ -14,6 +14,11 @@ class PaintingsController < ApplicationController
 
   def show
     @painting = Painting.find(params[:id])
+    if @painting.gallery.visibility == 0 && !current_user.try(:admin?)
+      redirect_to galleries_path
+    elsif @painting.gallery.visibility == 1 && !user_signed_in?
+      redirect_to galleries_path
+    end
   end
 
   def edit
