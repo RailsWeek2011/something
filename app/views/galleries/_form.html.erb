@@ -3,5 +3,9 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+  <p>
+    Visibility <br/>
+    <%= f.select(:visibility, {'Admin' => '0', 'User' => '1', 'All' => '2' }) %>
+  </p>
   <p><%= f.submit %></p>
 <% end %>

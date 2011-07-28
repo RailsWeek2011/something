@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110722083042) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "visibility"
   end
 
   create_table "paintings", :force => true do |t|
